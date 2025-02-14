@@ -94,10 +94,18 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-    <source src="https://velteltrz.github.io/audio-hosting/Juli%C3%B3n%20%C3%81lvarez%20y%20su%20Norte%C3%B1o%20Banda%20-%20Regalo%20de%20Dios.mp3" type="audio/mp3">
-    Tu navegador no soporta el elemento de audio.
-</audio>
+    <audio id="loveAudio" loop>
+        <source src="https://velteltrz.github.io/audio-hosting/Juli%C3%B3n%20%C3%81lvarez%20y%20su%20Norte%C3%B1o%20Banda%20-%20Regalo%20de%20Dios.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button id="playButton">🔊 Activar Música</button>
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            let audio = document.getElementById("loveAudio");
+            audio.play();
+            this.style.display = "none";
+        });
+    </script>
     <div class="container">
         <div class="message">Te Amo ❤️</div>
         <div class="image-container">
